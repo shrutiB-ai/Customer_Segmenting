@@ -1,0 +1,31 @@
+data:
+    path: "C:\\Users\\Shruti.Bhosale\\source\\repos\\shrutiB-ai\\Customer_Segmenting\\data\\Mall_Customers.csv"
+preprocessing:
+    scale_method: standard #options: standard,minmax
+mode : all 
+kmeans:
+    n_clusters: 5
+GMM:
+    n_components: 5
+hierarchical:
+    linkage: ward
+    n_clusters: 5
+dbscan:
+    eps: 0.5
+    min_samples: 5
+
+model:
+    type: hierarchical
+    n_clusters: 5
+    init: k-means++
+    max_iter: 300
+    random_state: 42
+    n_components: 5
+    covariance_type: full
+    linkage: ward
+    eps: 0.5
+    min_samples: 5
+
+visualization:
+    x: Annual Income (k$)
+    y: Spending Score (1-100)
